@@ -1,0 +1,91 @@
+﻿Login Window:
+- Staff login
+- Determines which window to show, depending on who logged in
+  (i.e. If Nurse logs in - show NurseWindow, Doctor logs in - show DoctWindow etc.)
+
+
+Admin Window:
+- CAN: add new patients
+- CAN: view and book appointments
+- CAN: book repeat appointments
+- CAN: view staff details
+- CAN: view and edit Rota Work Details
+- CAN: view and edit BASIC patient details (name, address, contact details)
+- CANNOT: view or edit PRIVATE patient details (medications, medical history)
+- CANNOT: Write prescriptions for patients
+
+
+Nurse Window:
+- CAN: view Rota Work Details
+- CAN: view or edit PRIVATE patient details (medications, medical history)
+- CAN: view and edit BASIC patient details (name, address, contact details)
+- CAN: Write prescriptions for patients
+- CANNOT: edit Rota Work Details
+- CANNOT: view staff details
+- CANNOT: book appointments
+
+
+Doctor Window:
+- CAN: view and edit BASIC patient details (name, address, contact details)
+- CAN: view and edit PRIVATE patient details (medications, medical history)
+- CAN: Write prescriptions for patients
+- CANNOT: view staff details
+- CANNOT: view or edit Rota Work Details
+- CANNOT: book appointments
+
+===============================================================================================================================
+
+Staff Details:
+- First Name (string)
+- Last Name (string)
+- Date of birth (string)
+- Address (string)
+- Contact number (string)
+- Job title (string)
+- Username (string)
+- Password (string)
+	- Username and Password will need to be moved to a "Credentials" window where their login details can be amended.
+
+
+Patient Details:
+- First Name (string)
+- Last Name (string)
+- Date of birth (string)
+- Address (string)
+- Contact number (string)
+- Next of kin (string)
+- Current Medications (List<Medication>)
+- Medical history (List<MedicalHistory>)
+- Additional notes (string)
+- Assigned Doctor (STAFF-Doctor)
+
+
+Appointment Details:
+- Appointment time (string?)
+- Appointment date (string?)
+- Booked by (Admin name) (STAFF-admin name)
+- Time + date appointment was booked (string? - DateTime.Now() ?)
+- Reason for appointment (string)
+- Assigned Doctor (STAFF - Doctor)
+- Assigned Nurse (STAFF - Nurse)
+- Outcome of appointment (string)
+- Another appointment needed? (bool)
+
+
+ScheduleCalendar Details:
+- Will be the main calendar for all doctor appointments.
+- Will need to be connected to Appointment Details so appointments can be scheduled
+- Will need to be connected to WorkRota Details so staff member (Doctor or Nurse)
+
+
+Medication Details:
+- Name
+- Dosage
+
+
+RotaWork Details:
+- EmployeeName (taken from StaffDetails)
+- Employee Job Title (taken from StaffDetails)
+- Start Time
+- Scheduled Finish Time
+- Actual Finish Time
