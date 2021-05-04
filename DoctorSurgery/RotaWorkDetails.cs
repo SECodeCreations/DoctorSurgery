@@ -7,7 +7,7 @@ using SoftwareLibrary.Interfaces;
 
 namespace DoctorSurgery
 {
-    class RotaWorkDetails
+    class RotaWorkDetails : IRotaWorkDetails
     {
         public string EmployeeName { get; set; }
         public string EmployeeJobTitle { get; set; }

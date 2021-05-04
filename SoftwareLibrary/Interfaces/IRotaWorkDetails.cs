@@ -2,7 +2,7 @@
 
 namespace SoftwareLibrary.Interfaces
 {
-    interface IRotaWorkDetails
+    public interface IRotaWorkDetails
     {
         DateTime ActualFinishTime { get; set; }
         string EmployeeJobTitle { get; set; }
