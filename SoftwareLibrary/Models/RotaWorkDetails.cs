@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using SoftwareLibrary.Interfaces;
 
-namespace DoctorSurgery
+namespace SoftwareLibrary.Models
 {
-    class RotaWorkDetails
+    class RotaWorkDetails : IRotaWorkDetails
     {
         public string EmployeeName { get; set; }
         public string EmployeeJobTitle { get; set; }
@@ -15,7 +15,5 @@ namespace DoctorSurgery
         public DateTime ScheduledFinishTime { get; set; }
         public DateTime ActualFinishTime { get; set; }
         public double OvertTimeWorked { get; set; }
-
-
     }
 }

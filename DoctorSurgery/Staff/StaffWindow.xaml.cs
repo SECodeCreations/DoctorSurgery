@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace DoctorSurgeryUI.Nurse
+namespace DoctorSurgeryUI.Staff
 {
     /// <summary>
-    /// Interaction logic for NurseWindow.xaml
+    /// Interaction logic for StaffWindow.xaml
     /// </summary>
-    public partial class NurseWindow : Window
+    public partial class StaffWindow : Window
     {
-        public NurseWindow()
+        public StaffWindow()
         {
             InitializeComponent();
         }
